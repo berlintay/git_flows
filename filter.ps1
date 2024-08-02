@@ -24,10 +24,10 @@ if ($userInput -eq "Y" -or $userInput -eq "y") {
             foreach ($contact in $contacts) {
                 $filteredContact = [PSCustomObject]@{
                     Email       = $contact.Email
-                    FirstName   = $contact.'First Name'
-                    LastName    = $contact.'Last Name'
-                    City        = $contact.City
-                    PhoneNumber = $contact.'Phone Number'
+                    FirstName   = $contact.'Name: First'
+                    LastName    = $contact.'Name: Last'
+                    City        = $contact.'Address: City'
+                    PhoneNumber = $contact.Phone
                 }
                 $filteredContacts += $filteredContact
             }
